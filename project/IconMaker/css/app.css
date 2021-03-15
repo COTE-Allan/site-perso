@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  background-size: cover;
+  font-family: "Press Start 2P", cursive;
+  margin: 0;
+  height: 100vh;
+}
+
+button:focus {
+  outline: none;
+}
+h1 {
+  text-align: center;
+  color: #e0f8d0;
+  margin-bottom: 2vmin;
+}
+/* -----------------------------------------------------------
+Palette de couleur
+----------------------------------------------------------- */
+.bg_darkestgreen {
+  background: #081820;
+}
+.bg_darkgreen {
+  background: #346856;
+}
+.bg_green {
+  background: #88c070;
+}
+.bg_lightgreen {
+  background: #e0f8d0;
+}
+
+/* -----------------------------------------------------------
+Palette de couleur
+----------------------------------------------------------- */
+
+.app-wrapper {
+  width: 64vmin;
+  margin: 5vmin auto 0;
+}
+.app-screen {
+  height: 64vmin;
+  width: 64vmin;
+  display: grid;
+  grid-template-columns: repeat(32, 2vmin);
+  grid-template-rows: repeat(32, 2vmin);
+  background: #fff;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.pixel {
+  border: 1px solid transparent;
+  cursor: crosshair;
+  transition: border 100ms ease-in-out;
+}
+.pixel:hover {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.colorset-name {
+  color: #fff;
+  font-size: 8px;
+  margin: 2vmin 0 0;
+  text-align: center;
+}
+.app-tools {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8px;
+  margin-top: 2vmin;
+}
+.app-tools .swatch {
+  height: 4vmin;
+  width: 4vmin;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0;
+  cursor: pointer;
+  display: block;
+  margin: 0 1vmin;
+}
+.app-tools .swatch.is-active {
+  border: 2px solid #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.app-tools .reset,
+.app-tools .export {
+  height: 4vmin;
+  background: #000;
+  color: #fff;
+  border: 0 none;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Press Start 2P", cursive;
+  font-size: 8px;
+  margin: 0 1vmin;
+  padding: 0 1vmin;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#result {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Night mode */
+h1 + i {
+  font-size: 50px;
+  color: black;
+  position: fixed;
+  left: 5px;
+  top: 5px;
+  transition: font-size 0.5s, color 0.5s;
+}
+h1 + i:hover {
+  font-size: 60px;
+}
+
+/* Background color */
+body.day .colorBybg {
+  color: black;
+  transition: font-size 0.5s, color 0.5s;
+}
+body.night .colorBybg {
+  color: white;
+  transition: font-size 0.5s, color 0.5s;
+}
+body.day {
+  background-image: url(../img/background-day.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  transition: background-image 0.25s ease-out;
+}
+body.night {
+  background-image: url(../img/background-night.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  transition: background-image 0.25s ease-out;
+}
+/* Fin BG Color */

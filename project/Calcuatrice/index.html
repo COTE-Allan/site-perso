@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="grid-container" id="calculatrice">
+      <div class="valeur ecran flexBouton">
+        <span> {{reponse}}{{operations}}{{nombreActuel}} </span>
+      </div>
+      <div @click="percent()" class="pourcentage autre flexBouton">%</div>
+      <div @click="resultat()" class="egale calcul flexBouton">=</div>
+      <div @click="ajoutVirgule()" class="virgule autre flexBouton">.</div>
+      <div @click="ajouterValeur('0')" class="zero chiffre flexBouton">0</div>
+      <div @click="ajouterValeur('1')" class="un chiffre flexBouton">1</div>
+      <div @click="ajouterValeur('2')" class="deux chiffre flexBouton">2</div>
+      <div @click="ajouterValeur('3')" class="trois chiffre flexBouton">3</div>
+      <div @click="resetValeur" class="reset autre flexBouton">C</div>
+      <div @click="reverseNumber" class="negatif autre flexBouton">+/-</div>
+      <div @click="ajouterValeur('7')" class="sept chiffre flexBouton">7</div>
+      <div @click="ajouterValeur('8')" class="huit chiffre flexBouton">8</div>
+      <div @click="ajouterValeur('9')" class="neuf chiffre flexBouton">9</div>
+      <div @click="ajouterValeur('6')" class="six chiffre flexBouton">6</div>
+      <div @click="ajouterValeur('5')" class="cinq chiffre flexBouton">5</div>
+      <div @click="ajouterValeur('4')" class="quatre chiffre flexBouton">4</div>
+      <div @click="terminerNombreActuel('+')" class="plus calcul flexBouton">
+        +
+      </div>
+      <div @click="terminerNombreActuel('-')" class="moins calcul flexBouton">
+        -
+      </div>
+      <div
+        @click="terminerNombreActuel('*')"
+        class="multiplication calcul flexBouton"
+      >
+        x
+      </div>
+      <div
+        @click="terminerNombreActuel('/')"
+        class="division calcul flexBouton"
+      >
+        /
+      </div>
+    </div>
+    <label>Made By Allan COTE</label>
+    <!-- Scripts -->
+    <!-- Vue.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Script Perso -->
+    <script src="js/calculatrice.js"></script>
+  </body>
+</html>

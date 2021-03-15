@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  font-size: 45px;
+  font-family: "Indie Flower", cursive;
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+label {
+  margin: 15px;
+  font-size: 17px;
+  letter-spacing: 15px;
+  width: 50vw;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+  width: 70vw;
+  height: 70vh;
+  grid-template-areas:
+    "valeur valeur valeur valeur"
+    "reset negatif pourcentage division"
+    "sept huit neuf multiplication"
+    "quatre cinq six moins"
+    "un deux trois plus"
+    "zero zero virgule egale";
+}
+
+.valeur {
+  grid-area: valeur;
+  font-size: 55px;
+}
+
+.pourcentage {
+  grid-area: pourcentage;
+}
+
+.egale {
+  grid-area: egale;
+}
+
+.virgule {
+  grid-area: virgule;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.un {
+  grid-area: un;
+}
+
+.deux {
+  grid-area: deux;
+}
+
+.trois {
+  grid-area: trois;
+}
+
+.reset {
+  grid-area: reset;
+}
+
+.negatif {
+  grid-area: negatif;
+}
+
+.sept {
+  grid-area: sept;
+}
+
+.huit {
+  grid-area: huit;
+}
+
+.neuf {
+  grid-area: neuf;
+}
+
+.six {
+  grid-area: six;
+}
+
+.cinq {
+  grid-area: cinq;
+}
+
+.quatre {
+  grid-area: quatre;
+}
+
+.plus {
+  grid-area: plus;
+}
+
+.moins {
+  grid-area: moins;
+}
+
+.multiplication {
+  grid-area: multiplication;
+}
+
+.division {
+  grid-area: division;
+}
+
+.flexBouton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ecran {
+  background-color: rgb(231, 228, 228);
+}
+
+.chiffre {
+  background-color: rgb(233, 230, 230);
+}
+.calcul {
+  background-color: rgb(209, 188, 188);
+}
+.autre {
+  background-color: rgb(252, 158, 158);
+}
+
+.grid-container div:hover {
+  border: rgba(0, 0, 0, 0.6) 4px solid;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.grid-container div {
+  border: rgba(0, 0, 0, 0.4) 2px solid;
+  transition: all 0.5s;
+  border-radius: 10px;
+  mix-blend-mode: luminosity;
+}
+.grid-container .ecran {
+  border: rgba(0, 0, 0, 0.4) 3px solid;
+}
+.grid-container .ecran:hover {
+  border: rgba(0, 0, 0, 0.4) 3px solid;
+  cursor: auto;
+}
+@media (max-width: 800px) {
+  body {
+    font-size: 25px;
+  }
+  .ecran span {
+    font-size: 22px;
+  }
+}
+@media (min-width: 850px) {
+  .grid-container {
+    width: 50vw;
+  }
+}

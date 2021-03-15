@@ -279,6 +279,9 @@ h1 {
   width: 70px;
   height: 70px;
 }
+.audiovisuel {
+  fill: black;
+}
 
 .elementCompetence:hover .svgCompetence {
   animation: bounce 1000ms ease-in-out;
